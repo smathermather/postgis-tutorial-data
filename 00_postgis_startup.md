@@ -19,7 +19,7 @@ Getting Started:
 	* Username
 	* Password
 
-Now we are connected to the database. We need to do two things more before we can load data and write queries:
+Now we are connected to the database. We need to do three things more before we can load data and write queries:
 1) Create a database to work in. (You are logged in as a database super user, which means you are a demi-god on this database server. Please be kind, be careful, and don't delete or modify anyone else's work... .)
 	* Double click on "PostGIS Tutorial Server"
 	* Right Click on "Databases" below "PostGIS Tutorial Server"
@@ -42,5 +42,11 @@ Now we are connected to the database. We need to do two things more before we ca
 			* ```CREATE EXTENSION pgrouting;
 			* ...
 Now that we've created the extensions, we should have some functions previously unavailable in our database:
-	* Double click "Schemas" then "public" then choose functions (0). We should have no functions available specific to our database yet. 
+	* Double click "Schemas" then "public" then choose "functions (????)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
+3) Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
+	* Execute the following in your SQL window ``` CREATE SCHEMA mydata; ```
+	* Now close your SQL window, double click your "mydata" schema and launch a new SQL window for doing all your work in.
+ 
 Congratulations. You now have a PostGIS, PointCloud, pgRouting... enabled database. Let's use this database to its full extent.
+
+Next, let's connect QGIS in with PostGIS. See 01qgis_postgis_connection.md
