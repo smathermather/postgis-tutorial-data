@@ -1,11 +1,13 @@
 Getting Started:
-* Goto Github for Windows
-* Click on the gear in the upper right hand corner; choose "Options"
-* Set "Default shell" to "Git Bash"
-* Start
-	* Git Shell (Windows)
-	* Terminal (Mac)
-	* A terminal (Linux)
+* (For Windows users only):
+	* Goto Github for Windows
+	* Click on the gear in the upper right hand corner; choose "Options"
+	* Set "Default shell" to "Git Bash"
+* (For any operating system users:
+	* Start
+		* Git Shell (Windows)
+		* Terminal (Mac)
+		* A terminal (Linux)
 * Need command to connect to server...
 
 * Launch pgAdmin (give typical settings as well)
@@ -17,7 +19,7 @@ Getting Started:
 	* Password
 
 Now we are connected to the database. We need to do two things more before we can load data and write queries:
-1) Create a database to work in. (You are logged in as a database super user. Please be kind, and don't delete anyone else's work... .)
+1) Create a database to work in. (You are logged in as a database super user, which means you are a demi-god on this database server. Please be kind, be careful, and don't delete or modify anyone else's work... .)
 	* Double click on "PostGIS Tutorial Server"
 	* Right Click on "Databases" below "PostGIS Tutorial Server"
 	* Choose "New Database"
