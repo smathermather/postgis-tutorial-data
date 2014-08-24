@@ -10,7 +10,7 @@ Getting Started:
 		* A terminal (Linux)
 * We will connect to a remote PostgreSQL instance piped through ssh
 	* Need command to connect to server...
-	``` ssh -L 5432:???.??.???.??:63333 
+	``` ssh -L 63333:localhost:5432 <user>@128.199.188.115 ```
 * Launch pgAdmin (give typical settings as well)
 * Click on the _plug_ button in the upper left. This will launch "New Server Registration"
 	* Give name (PostGIS Tutorial Server)
