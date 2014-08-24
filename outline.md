@@ -12,6 +12,6 @@
 * pgRouting driving distance example
 	* Code in book
 * Point Cloud Example
-	
+	* Code in repo
 * ST_Area Example
-	* To be written
+	* To be written (but straight forward)
