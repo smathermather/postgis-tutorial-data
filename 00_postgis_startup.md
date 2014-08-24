@@ -8,13 +8,14 @@ Getting Started:
 		* Git Shell (Windows)
 		* Terminal (Mac)
 		* A terminal (Linux)
-* Need command to connect to server...
-
+* We will connect to a remote PostgreSQL instance piped through ssh
+	* Need command to connect to server...
+	``` ssh -L 5432:???.??.???.??:63333 
 * Launch pgAdmin (give typical settings as well)
 * Click on the _plug_ button in the upper left. This will launch "New Server Registration"
 	* Give name (PostGIS Tutorial Server)
 	* Host "localhost"
-	* Port ???
+	* Port 63333
 	* Username
 	* Password
 
@@ -23,7 +24,7 @@ Now we are connected to the database. We need to do two things more before we ca
 	* Double click on "PostGIS Tutorial Server"
 	* Right Click on "Databases" below "PostGIS Tutorial Server"
 	* Choose "New Database"
-	* Name your database. Your username would be a good choice. Whatever you choose, make sure you remember the name of your database (there will be many databases in that list very soon).
+	* Name your database as your username
 	* (optional) If you choose the SQL tab before choosing "OK", you will see the SQL used to create our new database
 	* Choose "OK".  This will create your new database.
 2) Enable your database with the following extensions:
@@ -40,4 +41,6 @@ Now we are connected to the database. We need to do two things more before we ca
 			* ```CREATE EXTENSION pointcloud;
 			* ```CREATE EXTENSION pgrouting;
 			* ...
+Now that we've created the extensions, we should have some functions previously unavailable in our database:
+	* Double click "Schemas" then "public" then choose functions (0). We should have no functions available specific to our database yet. 
 Congratulations. You now have a PostGIS, PointCloud, pgRouting... enabled database. Let's use this database to its full extent.
