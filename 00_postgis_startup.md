@@ -46,7 +46,7 @@ CREATE EXTENSION pointcloud_postgis; ```
 	* Double click "Schemas" then "public" then choose "functions (1127)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
 	3. Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
 		* Execute the following in your SQL window ``` CREATE SCHEMA mydata; ```
-		* Now let us set that new schema in our search path, to make referencing tables and functions in that schema easier: ```SET search_path TO mydata, public;```
+		* Now let us set that new schema in our search path, to make referencing tables and functions in that schema easier: ``` SET search_path TO mydata, public; ```
  
 * Congratulations. You now have a PostGIS, PointCloud, pgRouting... enabled database. Let's use this database to its full extent.
 
