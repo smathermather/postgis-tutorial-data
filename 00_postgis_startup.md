@@ -40,7 +40,7 @@ Getting Started:
 CREATE EXTENSION postgis_topology;
 CREATE EXTENSION pgrouting;
 CREATE EXTENSION pointcloud;
-CREATE EXTENSION pointcloud_postgis;
+CREATE EXTENSION pointcloud_postgis; ```
 
 * Now that we've created the extensions, we should have some functions previously unavailable in our database:
 	* Double click "Schemas" then "public" then choose "functions (????)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
