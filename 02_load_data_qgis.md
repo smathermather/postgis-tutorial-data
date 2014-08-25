@@ -1,5 +1,5 @@
 Background:
-	* We will be loading data from a zipped shapefile, a specialized geographic format that is a formal and defacto data standard, and quite common. The dataset itself is ????.
+	* We will be loading data from a zipped shapefile, a specialized geographic format that is a formal and defacto data standard, and quite common. The dataset itself is a dataset of global drainage basins.
 	* In this exercise, we will be using PostGIS as storage medium for the data and view those data using QGIS, a desktop GIS platform.
 
 Let's load some data:
@@ -7,12 +7,12 @@ Let's load some data:
 		*Choose the "Add Vector Layer" button from the "Manage Layers" toolbar.
 		* Choose "Browse"
 		* Switch file type to "All files (*)
-		* Navigate to data/st_data/ and choose waterstat_waterpollution2000_basinres.zip
+		* Navigate to data/st_data/ and choose waterstat_pacific.zip
 		* Now choose open to load our zipped shapefile
 	* Import dataset into PostGIS:
 		* From the QGIS menu, choose "Database > DB Manager > DBManager"
 		* Navigate to your "mydata" schema then choose "Import vector layer"
-			* Input 'waterstat' for table name
+			* Input 'waterstat_pacific' for table name
 			* Set "Primary Key" to 'gid'
 			* Set "Source SRID" to 4326
 			* Choose "Create Spatial Index"
