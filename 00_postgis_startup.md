@@ -20,14 +20,14 @@ Getting Started:
 	* Password
 
 Now we are connected to the database. We need to do three things more before we can load data and write queries:
-1) Create a database to work in. (You are logged in as a database super user, which means you are a demi-god on this database server. Please be kind, be careful, and don't delete or modify anyone else's work... .)
+1. Create a database to work in. (You are logged in as a database super user, which means you are a demi-god on this database server. Please be kind, be careful, and don't delete or modify anyone else's work... .)
 	* Double click on "PostGIS Tutorial Server"
 	* Right Click on "Databases" below "PostGIS Tutorial Server"
 	* Choose "New Database"
 	* Name your database as your username
 	* (optional) If you choose the SQL tab before choosing "OK", you will see the SQL used to create our new database
 	* Choose "OK".  This will create your new database.
-2) Enable your database with the following extensions:
+2. Enable your database with the following extensions:
 	* PostGIS, PointCloud, pgRouting, ...
 		* Double click on your new database to connect. The red "x" on the database should disappear, and you should see a small hierarchy expand with something similar to the following items:
 			* Catalogs (2)
@@ -45,7 +45,7 @@ CREATE EXTENSION pointcloud_postgis;
 
 Now that we've created the extensions, we should have some functions previously unavailable in our database:
 	* Double click "Schemas" then "public" then choose "functions (????)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
-3) Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
+3. Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
 	* Execute the following in your SQL window ``` CREATE SCHEMA mydata; ```
 	* Now let us set that new schema in our search path, to make referencing tables and functions in that schema easier: ```SET search_path TO mydata, public;```
  
