@@ -36,7 +36,7 @@ Getting Started:
 				* Slony Replication (0)
 		* Amongst other functionality, when we use "CREATE EXTENSION ..." we will be adding all sorts of new functions to our database. Let's look at what we have before we do this. Double click "Schemas" then "public" then choose functions (0). We should have no functions available specific to our database yet. 
 		* Now we can actually create our extensions. Choose the SQL button at the top and type in and execute the following ("Execute Query" using the green arrow / triangle):
-			* ```SQL CREATE EXTENSION postgis;
+			* ``` CREATE EXTENSION postgis;
 CREATE EXTENSION postgis_topology;
 CREATE EXTENSION pgrouting;
 CREATE EXTENSION pointcloud;
