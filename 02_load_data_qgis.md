@@ -20,6 +20,6 @@ Let's load some data:
 We can load and view our data.
 	* Choose the Elephant icon from the "Manage Layers" toolbar.
 	* Choose "PostGIS Tutorial from the drop down, if it is not already, and choose "Connect".
-	* Choose your mydata.waterstat table, and choose Add.
+	* Choose your mydata.waterstat_pacific table, and choose Add.
 
 Let's briefly recap. We have in the last few steps spatially enabled a PostgreSQL database with PostGIS and other extensions, connected a desktop GIS tool to it, QGIS, and used QGIS to load spatial data into a table, as well as view it within the database. Our next step is to do some basic analyses on the data.
