@@ -42,12 +42,12 @@ CREATE EXTENSION pgrouting;
 CREATE EXTENSION pointcloud;
 CREATE EXTENSION pointcloud_postgis;
 
-Now that we've created the extensions, we should have some functions previously unavailable in our database:
+* Now that we've created the extensions, we should have some functions previously unavailable in our database:
 	* Double click "Schemas" then "public" then choose "functions (????)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
-3. Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
-	* Execute the following in your SQL window ``` CREATE SCHEMA mydata; ```
-	* Now let us set that new schema in our search path, to make referencing tables and functions in that schema easier: ```SET search_path TO mydata, public;```
+	3. Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
+		* Execute the following in your SQL window ``` CREATE SCHEMA mydata; ```
+		* Now let us set that new schema in our search path, to make referencing tables and functions in that schema easier: ```SET search_path TO mydata, public;```
  
-Congratulations. You now have a PostGIS, PointCloud, pgRouting... enabled database. Let's use this database to its full extent.
+* Congratulations. You now have a PostGIS, PointCloud, pgRouting... enabled database. Let's use this database to its full extent.
 
-Next, let's connect QGIS in with PostGIS. See 01_gis_postgis_connection.md
+* Next, let's connect QGIS in with PostGIS. See 01_gis_postgis_connection.md
