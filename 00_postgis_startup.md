@@ -37,10 +37,12 @@ Now we are connected to the database. We need to do three things more before we 
 			* Slony Replication (0)
 		* Amongst other functionality, when we use "CREATE EXTENSION ..." we will be adding all sorts of new functions to our database. Let's look at what we have before we do this. Double click "Schemas" then "public" then choose functions (0). We should have no functions available specific to our database yet. 
 		* Now we can actually create our extensions. Choose the SQL button at the top and type in and execute the following ("Execute Query" using the green arrow / triangle):
-			* ```CREATE EXTENSION postgis;
-			* ```CREATE EXTENSION pointcloud;
-			* ```CREATE EXTENSION pgrouting;
-			* ...
+			* ```SQL CREATE EXTENSION postgis;
+CREATE EXTENSION postgis_topology;
+CREATE EXTENSION pgrouting;
+CREATE EXTENSION pointcloud;
+CREATE EXTENSION pointcloud_postgis;
+
 Now that we've created the extensions, we should have some functions previously unavailable in our database:
 	* Double click "Schemas" then "public" then choose "functions (????)" (if things have not refreshed, this will say instead "functions (0)"). Now we will be able to view the many functions that were added by enabling our extensions.
 3) Finally, we should create a working schema, so that as we add functions and tables, we aren't mucking up our public schema. This will allow us to manage our custom data with upgrades, and aids in maintaining backups as well.
