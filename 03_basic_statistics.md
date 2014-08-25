@@ -8,28 +8,28 @@ For this exercise, let us return to pgAdmin as our tool of choice. Activate your
 
 The naive approach for calculating area would be as follows:
 
-``` SELECT ST_Area(geom) AS area FROM mydata.waterstat;```
+``` SELECT ST_Area(geom) AS area FROM waterstat;```
 
 But, as it happens, this returns our results as false areas in angular coordinates. Fortunately, ST_Area is an overloaded function, meaning that depending on what parameters you feed it, its behavior may be different.  In the above example, we are passing the function a geometry, in which case, the ST_Area function will take our literal input and return a literal value. In order to get the function to calculate geodetic area in meters square units, we require two conditions: the first is that we pass it data in the WGS84 datum; the second is that the are passed as geography, not geometry. For PostGIS, these are distinct types. Fortunately, it is easy to translate between them for our case. We will use the PostgreSQL specific ```::``` operator to CAST our geometry as a geography. (We could also use a formal CAST, but the operator is so convenient.)
 
-``` SELECT ST_Area(geom::geography) AS area FROM mydata.waterstat;
+``` SELECT ST_Area(geom::geography) AS area FROM waterstat;
 ```
 
 Now, for completeness, we will create this as its own new table, and update it accordingly, and also convert it to square killometers along the way:
 
 ```
-CREATE TABLE mydata.waterstat_area AS
-	SELECT *, ST_Area(geom::geography) / 1000000 AS area FROM mydata.waterstat;
+CREATE TABLE waterstat_area AS
+	SELECT *, ST_Area(geom::geography) / 1000000 AS area FROM waterstat;
 ```
 
 
 One could also do this as an update query against the original table.
 
 ```
-ALTER TABLE mydata.waterstat
+ALTER TABLE waterstat
    ADD COLUMN area numeric;
 
-UPDATE mydata.waterstat SET area = ST_Area(geom::geography) / 1000000
+UPDATE waterstat SET area = ST_Area(geom::geography) / 1000000
 ```
 
 To summarize, we can now load spatial data in a PostGIS database, view it as a map in open source desktop software, and now also run basic statistics against it. For the next exercise we will go a little bit deeper.
