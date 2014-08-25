@@ -18,7 +18,6 @@ Getting Started:
 	* Port 63333
 	* Username
 	* Password
-
 * Now we are connected to the database. We need to do three things more before we can load data and write queries:
 	1. Create a database to work in. (You are logged in as a database super user, which means you are a demi-god on this database server. Please be kind, be careful, and don't delete or modify anyone else's work... .)
 		* Double click on "PostGIS Tutorial Server"
