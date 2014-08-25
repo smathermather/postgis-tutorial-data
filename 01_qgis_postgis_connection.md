@@ -11,3 +11,4 @@
 		* Set "Password"
 		* Choose the "Save Username" and "Save Password" options
 		* Choose "Test Connect" to make sure everything works.
+		* Choose "OK" to save this connection.
