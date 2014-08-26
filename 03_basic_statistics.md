@@ -29,7 +29,7 @@ One could also do this as an update query against the original table.
 ALTER TABLE waterstat_pacific
    ADD COLUMN area numeric;
 
-UPDATE waterstat_pacific SET area = ST_Area(geom::geography) / 1000000
+UPDATE waterstat_pacific SET area = ST_Area(geom::geography) / 1000000;
 ```
 
 To summarize, we can now load spatial data in a PostGIS database, view it as a map in open source desktop software, and now also run basic statistics against it. For the next exercise we will go a little bit deeper.
