@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Pipeline version="1.0">
   <Writer type="drivers.pgpointcloud.writer">
-    <Option name="connection">dbname='dbname' user='username' host='localhost'</Option>
+    <Option name="connection">dbname='AAnkhBuns' user='AAnkhBuns' 
+
+host='localhost'</Option>
     <Option name="table">18001190PAS</Option>
     <Option name="srid">3362</Option>
     <Filter type="filters.chipper">
