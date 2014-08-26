@@ -15,7 +15,7 @@ Edit 18001190PAS.xml for database connection info:
 <Pipeline version="1.0">
   <Writer type="drivers.pgpointcloud.writer">
     <Option name="connection">dbname='AAnkhBuns' user='AAnkhBuns' host='localhost'</Option>
-    <Option name="table">18001190PAS</Option>
+    <Option name="table">a18001190PAS</Option>
     <Option name="srid">3362</Option>
     <Filter type="filters.chipper">
       <Option name="capacity">20</Option>
@@ -30,3 +30,6 @@ Edit 18001190PAS.xml for database connection info:
 </Pipeline>
 ```
 
+```
+pdal pipeline pc_config.xml
+```
