@@ -4,7 +4,7 @@
     <Option name="connection">dbname='AAnkhBuns' user='AAnkhBuns' 
 
 host='localhost'</Option>
-    <Option name="table">18001190PAS</Option>
+    <Option name="table">a18001190PAS</Option>
     <Option name="srid">3362</Option>
     <Filter type="filters.chipper">
       <Option name="capacity">20</Option>
