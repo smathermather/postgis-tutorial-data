@@ -5,7 +5,7 @@
     <Option name="table">a18001190PAS</Option>
     <Option name="srid">3362</Option>
     <Filter type="filters.chipper">
-      <Option name="capacity">20</Option>
+      <Option name="capacity">400</Option>
       <Filter type="filters.cache">
         <Reader type="drivers.las.reader">
           <Option name="filename">18001190PAS.las</Option>
